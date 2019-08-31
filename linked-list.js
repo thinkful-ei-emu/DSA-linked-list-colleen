@@ -139,6 +139,7 @@ function display(list) {
     currentItem = currentItem.next;
   }
   console.log(displayed);
+  return(displayed)
 }
 //display(list);
 
@@ -258,9 +259,31 @@ function reverseList(list) {
     list.head = previousNode
   }
 
-  display(list);
+  //display(list);
+  return list;
 }
 
-reverseList(list);
+//reverseList(list);
 
-
+function thirdFromTheEnd(list){
+  /* let mylist = list
+  let size = size(mylist)
+  let third = Math.abs(2 - size) */
+  let currentItem = list.head
+  let previousItem = list.head
+  /* for(let i = 0; i <= third; i++){
+    currentItem=currentItem.next
+  }
+  console.log(currentItem) */
+   while(currentItem.next !== null) {
+     previousItem = currentItem;
+    currentItem = currentItem.next;
+  }
+  console.log(currentItem)
+  for(let i = 0; i <3; i++){
+    currentItem = previousItem
+  }
+  
+  
+}
+thirdFromTheEnd(list)
